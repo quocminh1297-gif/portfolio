@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | Nguyễn Quốc Minh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">QM<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Giới thiệu</a></li>
+      <li><a href="projects.html">Dự án</a></li>
+      <li><a href="summary.html">Tổng kết</a></li>
+    </ul>
+    <div class="nav-badge">UET · VNU</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <div class="hero-tag fade-in delay-1">Nhập môn Công nghệ số & AI</div>
+      <h1 class="hero-name fade-in delay-2">Nguyễn<br><em>Quốc Minh</em></h1>
+      <div class="hero-meta fade-in delay-3">
+        <span class="meta-item"><span class="meta-label">MSV</span> 25020272</span>
+        <span class="meta-divider">·</span>
+        <span class="meta-item"><span class="meta-label">Khoa</span> Công nghệ Thông tin</span>
+        <span class="meta-divider">·</span>
+        <span class="meta-item"><span class="meta-label">Trường</span> UET – VNU</span>
+      </div>
+      <p class="hero-desc fade-in delay-4">
+        Portfolio kỹ thuật số ghi lại hành trình học tập và thực hành 
+        qua <strong>6 tuần</strong> khám phá công nghệ số, kỹ năng thông tin 
+        và ứng dụng Trí tuệ Nhân tạo trong môi trường học thuật.
+      </p>
+      <div class="hero-cta fade-in delay-5">
+        <a href="projects.html" class="btn-primary">Xem bài tập →</a>
+        <a href="summary.html" class="btn-ghost">Tổng kết</a>
+      </div>
+    </div>
+    <div class="hero-visual fade-in delay-3">
+      <div class="code-card">
+        <div class="code-card-header">
+          <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+          <span class="code-filename">portfolio.json</span>
+        </div>
+        <pre class="code-body"><code>{
+  <span class="key">"name"</span>: <span class="str">"Nguyễn Quốc Minh"</span>,
+  <span class="key">"msv"</span>: <span class="num">25020272</span>,
+  <span class="key">"school"</span>: <span class="str">"UET – VNU"</span>,
+  <span class="key">"skills"</span>: [
+    <span class="str">"File Management"</span>,
+    <span class="str">"Research & Evaluation"</span>,
+    <span class="str">"Prompt Engineering"</span>,
+    <span class="str">"Online Collaboration"</span>,
+    <span class="str">"AI Content Creation"</span>,
+    <span class="str">"Responsible AI"</span>
+  ],
+  <span class="key">"status"</span>: <span class="str">"<span class="blink">●</span> learning"</span>
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section">
+    <div class="container">
+      <div class="section-label">// Về tôi</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Mục tiêu<br>học tập</h2>
+          <p>Là sinh viên năm nhất ngành Công nghệ Thông tin tại UET, tôi xây dựng portfolio này như một <strong>bản đồ hành trình</strong> học tập — không chỉ lưu trữ kết quả mà còn phản ánh quá trình tư duy, thách thức và trưởng thành.</p>
+          <p>Định hướng phát triển của tôi là trở thành một <strong>Software Engineer</strong> có nền tảng lý thuyết vững chắc, kết hợp với kỹ năng ứng dụng AI một cách có trách nhiệm trong thực tiễn nghề nghiệp.</p>
+        </div>
+        <div class="about-goals">
+          <div class="goal-card">
+            <div class="goal-icon">🎯</div>
+            <div class="goal-title">Mục đích Portfolio</div>
+            <ul class="goal-list">
+              <li>Thể hiện các kỹ năng số đã học</li>
+              <li>Lưu trữ sản phẩm cá nhân dễ truy cập</li>
+              <li>Chia sẻ hành trình học tập với giảng viên</li>
+              <li>Làm nền tảng cho profile nghề nghiệp tương lai</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEK OVERVIEW -->
+  <section class="weeks section">
+    <div class="container">
+      <div class="section-label">// Các bài tập</div>
+      <h2 class="section-title">6 Tuần · 6 Kỹ năng</h2>
+      <div class="weeks-grid">
+        <a href="projects.html#week1" class="week-card" data-week="01">
+          <div class="week-num">01</div>
+          <div class="week-icon">📁</div>
+          <div class="week-title">Quản lý tệp & thư mục</div>
+          <div class="week-desc">Tổ chức dữ liệu khoa học trên Windows</div>
+          <div class="week-arrow">→</div>
+        </a>
+        <a href="projects.html#week2" class="week-card" data-week="02">
+          <div class="week-num">02</div>
+          <div class="week-icon">🔍</div>
+          <div class="week-title">Tìm kiếm học thuật</div>
+          <div class="week-desc">Google Scholar, IEEE, toán tử nâng cao</div>
+          <div class="week-arrow">→</div>
+        </a>
+        <a href="projects.html#week3" class="week-card" data-week="03">
+          <div class="week-num">03</div>
+          <div class="week-icon">✍️</div>
+          <div class="week-title">Prompt Engineering</div>
+          <div class="week-desc">Khuôn mẫu C-R-A-F-T cho AI</div>
+          <div class="week-arrow">→</div>
+        </a>
+        <a href="projects.html#week4" class="week-card" data-week="04">
+          <div class="week-num">04</div>
+          <div class="week-icon">🤝</div>
+          <div class="week-title">Hợp tác trực tuyến</div>
+          <div class="week-desc">Trello · Discord · Google Workspace</div>
+          <div class="week-arrow">→</div>
+        </a>
+        <a href="projects.html#week5" class="week-card" data-week="05">
+          <div class="week-num">05</div>
+          <div class="week-icon">🎨</div>
+          <div class="week-title">Sáng tạo nội dung AI</div>
+          <div class="week-desc">Infographic với Gemini + DALL-E 3</div>
+          <div class="week-arrow">→</div>
+        </a>
+        <a href="projects.html#week6" class="week-card" data-week="06">
+          <div class="week-num">06</div>
+          <div class="week-icon">⚖️</div>
+          <div class="week-title">AI có trách nhiệm</div>
+          <div class="week-desc">Bộ nguyên tắc 3C-3K cá nhân</div>
+          <div class="week-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-logo">QM<span class="dot">.</span></div>
+        <p>Nguyễn Quốc Minh · MSV 25020272<br>UET – Đại học Quốc gia Hà Nội</p>
+      </div>
+      <div class="footer-right">
+        <a href="index.html">Giới thiệu</a>
+        <a href="projects.html">Dự án</a>
+        <a href="summary.html">Tổng kết</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 · Nhập môn Công nghệ số & AI · UET</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
