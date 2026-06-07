@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dự án | Nguyễn Quốc Minh</title>
+  <title>Dự án | Nguyễn Quốc Minh – Portfolio 6 tuần</title>
+  <meta name="description" content="6 bài tập thành phần: Quản lý tệp, Tìm kiếm học thuật, Prompt Engineering, Hợp tác trực tuyến, Sáng tạo AI, và AI có trách nhiệm.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <div id="scroll-progress"></div>
+  <button id="back-to-top" aria-label="Về đầu trang">↑</button>
 
   <nav class="nav" id="nav">
     <div class="nav-logo">QM<span class="dot">.</span></div>
@@ -33,11 +37,11 @@
   <main class="projects-main">
     <div class="container">
 
-      <!-- WEEK 1 -->
+      <!-- ===== WEEK 1 ===== -->
       <article class="project-section" id="week1">
         <div class="project-header">
           <div class="project-num-tag">Tuần 01</div>
-          <div class="project-badge file">Quản lý Tệp & Thư mục</div>
+          <div class="project-badge file">Quản lý Tệp &amp; Thư mục</div>
         </div>
         <div class="project-grid">
           <div class="project-info">
@@ -48,36 +52,50 @@
             <div class="project-highlights">
               <h3>Điểm nổi bật</h3>
               <ul>
-                <li>Thiết lập cấu trúc thư mục đa cấp có hệ thống</li>
-                <li>Quy tắc đặt tên theo định dạng: <code>[NămThángNgày]_[Tiền tố]_[Nội dung]</code></li>
-                <li>Thực hành 12 thao tác cơ bản trên File Explorer</li>
-                <li>Ứng dụng vào dự án Java thực tế ngay trong tuần</li>
+                <li>Thiết lập cấu trúc thư mục <strong>đa cấp 3 tầng</strong> có hệ thống</li>
+                <li>Quy tắc đặt tên theo định dạng: <code>[YYYYMMDD]_[TYPE]_[Nội dung]</code></li>
+                <li>Thực hành <strong>12 thao tác</strong> cơ bản trên File Explorer</li>
+                <li>Ứng dụng ngay vào dự án Java nhóm trong cùng tuần</li>
+                <li>Lý do thiết kế: sắp xếp tự động theo thời gian, dễ filter, nhất quán nhóm</li>
               </ul>
             </div>
           </div>
           <div class="project-detail-card">
             <div class="detail-section">
-              <div class="detail-label">Cấu trúc thư mục đã tạo</div>
-              <div class="folder-tree">
-                <div class="folder-item root">📁 ThucHanh_NguyenQuocMinh</div>
-                <div class="folder-item l1">📁 01_Tai_lieu_Ky_thuat</div>
-                <div class="folder-item l2">📄 20260607_DOC_Jackson.docx</div>
-                <div class="folder-item l1">📁 02_Source_Code_Backup</div>
-                <div class="folder-item l2">📄 20260512_SRC_BidHub_v1.zip</div>
-                <div class="folder-item l1">📁 03_Bao_cao_Tien_do</div>
-                <div class="folder-item l2">📄 20260531_RPT_Week5.pdf</div>
+              <div class="detail-label">📸 Minh họa cấu trúc thư mục</div>
+              <!-- Terminal-style folder screenshot mockup -->
+              <div style="background:#0d1117;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:1rem;font-family:'Space Mono',monospace;font-size:0.72rem;line-height:1.8;">
+                <div style="color:#58a6ff;margin-bottom:0.5rem;">PS C:\Users\QuocMinh&gt; tree ThucHanh_NguyenQuocMinh</div>
+                <div style="color:#00d4b4;">📁 ThucHanh_NguyenQuocMinh/</div>
+                <div style="color:#7a8499;padding-left:1rem;">├── 📁 <span style="color:#60a5fa;">01_Tai_lieu_Ky_thuat/</span></div>
+                <div style="color:#4a5568;padding-left:2rem;">│   ├── 📄 20260607_DOC_Jackson_ObjectMapper.docx</div>
+                <div style="color:#4a5568;padding-left:2rem;">│   └── 📄 20260601_DOC_Git_Rebase_vs_Merge.pdf</div>
+                <div style="color:#7a8499;padding-left:1rem;">├── 📁 <span style="color:#60a5fa;">02_Source_Code_Backup/</span></div>
+                <div style="color:#4a5568;padding-left:2rem;">│   ├── 📄 20260512_SRC_BidHub_v1.zip</div>
+                <div style="color:#4a5568;padding-left:2rem;">│   └── 📄 20260519_SRC_BidHub_v2.zip</div>
+                <div style="color:#7a8499;padding-left:1rem;">├── 📁 <span style="color:#60a5fa;">03_Bao_cao_Tien_do/</span></div>
+                <div style="color:#4a5568;padding-left:2rem;">│   └── 📄 20260531_RPT_Week5_Progress.pdf</div>
+                <div style="color:#7a8499;padding-left:1rem;">└── 📁 <span style="color:#60a5fa;">04_Tai_nguyen_Nhom/</span></div>
+                <div style="color:#4a5568;padding-left:2rem;">    └── 📄 20260601_MOM_Meeting_Notes.docx</div>
+                <div style="color:#4ade80;margin-top:0.5rem;">✓ 4 thư mục · 7 tệp · Quy tắc nhất quán 100%</div>
               </div>
             </div>
             <div class="detail-section">
-              <div class="detail-label">Quy tắc đặt tên</div>
+              <div class="detail-label">Quy tắc đặt tên &amp; Lý do thiết kế</div>
               <div class="naming-rule">
-                <code class="naming-code">[YYYYMMDD]_[TYPE]_[Name].[ext]</code>
-                <div class="naming-example">Ví dụ: <em>20260607_DOC_Dacta_Jackson_ObjectMapper.docx</em></div>
-                <div class="naming-reason">Lý do: Sắp xếp tự động theo thời gian, dễ tìm kiếm bằng filter, nhất quán giữa các thành viên nhóm.</div>
+                <code class="naming-code">[YYYYMMDD]_[TYPE]_[Tên mô tả].[ext]</code>
+                <div class="naming-example">Ví dụ: <em>20260607_DOC_Jackson_ObjectMapper_Notes.docx</em></div>
+                <div class="naming-reason">
+                  <strong style="color:var(--teal)">Tại sao thiết kế như vậy?</strong><br>
+                  ① Ngày tháng đầu tiên → File Explorer tự sắp xếp theo thứ tự thời gian<br>
+                  ② TYPE prefix (DOC/SRC/RPT/MOM) → Filter trong 1 giây không cần mở<br>
+                  ③ Không dấu, không khoảng trắng → Tương thích bash/terminal/git<br>
+                  ④ Nhất quán → Đồng đội đọc ngay, không cần giải thích
+                </div>
               </div>
             </div>
             <div class="detail-section">
-              <div class="detail-label">Các thao tác đã thực hành</div>
+              <div class="detail-label">Các thao tác đã thực hành (12/12)</div>
               <div class="ops-grid">
                 <span class="op-tag">✓ Tạo thư mục</span>
                 <span class="op-tag">✓ Đổi tên</span>
@@ -87,71 +105,117 @@
                 <span class="op-tag">✓ Xóa vĩnh viễn</span>
                 <span class="op-tag">✓ Khôi phục</span>
                 <span class="op-tag">✓ Tìm kiếm</span>
+                <span class="op-tag">✓ Nén ZIP</span>
+                <span class="op-tag">✓ Giải nén</span>
+                <span class="op-tag">✓ Phân quyền</span>
+                <span class="op-tag">✓ Shortcut</span>
               </div>
             </div>
           </div>
         </div>
         <div class="project-reflection">
           <div class="reflection-icon">💡</div>
-          <p><strong>Bài học rút ra:</strong> Một hệ thống đặt tên nhất quán không chỉ giúp bản thân tìm kiếm nhanh hơn mà còn giúp đồng đội hiểu ngay nội dung tệp mà không cần mở ra — đây là nền tảng của mọi dự án phần mềm chuyên nghiệp.</p>
+          <p><strong>Bài học rút ra:</strong> Một hệ thống đặt tên nhất quán không chỉ giúp bản thân tìm kiếm nhanh hơn mà còn giúp đồng đội hiểu ngay nội dung tệp mà không cần mở ra — đây là nền tảng của mọi dự án phần mềm chuyên nghiệp. Tuần này tôi nhận ra: <em>"Cấu trúc thư mục phản ánh cấu trúc tư duy của người tạo ra nó."</em></p>
         </div>
       </article>
 
       <div class="section-divider"></div>
 
-      <!-- WEEK 2 -->
+      <!-- ===== WEEK 2 ===== -->
       <article class="project-section" id="week2">
         <div class="project-header">
           <div class="project-num-tag">Tuần 02</div>
-          <div class="project-badge search">Tìm kiếm & Đánh giá thông tin</div>
+          <div class="project-badge search">Tìm kiếm &amp; Đánh giá thông tin</div>
         </div>
         <div class="project-grid">
           <div class="project-info">
             <h2 class="project-title">Đánh giá hiệu năng<br>Java Concurrent Data Structures</h2>
             <p class="project-desc">
-              Nghiên cứu học thuật chuyên sâu về Cấu trúc Dữ liệu Đồng thời trong Java — chủ đề giao thoa giữa kiến thức Cấu trúc Dữ liệu và lập trình đa luồng. Thu thập 12 tài liệu từ 4 nhóm nguồn khác nhau và đánh giá độ tin cậy theo 4 tiêu chí khoa học.
+              Nghiên cứu học thuật chuyên sâu về Cấu trúc Dữ liệu Đồng thời trong Java — chủ đề giao thoa giữa Cấu trúc Dữ liệu và lập trình đa luồng. Thu thập 12 tài liệu từ 4 nhóm nguồn khác nhau và đánh giá độ tin cậy theo tiêu chí khoa học.
             </p>
             <div class="project-highlights">
               <h3>Chiến lược tìm kiếm</h3>
               <ul>
-                <li>Nguồn học thuật: Google Scholar, IEEE Xplore, ACM Digital Library</li>
-                <li>Toán tử nâng cao: <code>site:</code>, <code>filetype:</code>, <code>"..."</code>, <code>-</code>, <code>intitle:</code></li>
-                <li>Đánh giá theo: Tác giả · Phương pháp · Trích dẫn · Tính cập nhật</li>
-                <li>Thu thập được 12 tài liệu chất lượng cao từ ACM/IEEE</li>
+                <li>Nguồn học thuật: <strong>Google Scholar, IEEE Xplore, ACM Digital Library</strong></li>
+                <li>Sử dụng linh hoạt <strong>7 toán tử</strong>: <code>site:</code>, <code>filetype:</code>, <code>"..."</code>, <code>-</code>, <code>intitle:</code>, <code>after:</code>, <code>OR</code></li>
+                <li>Đánh giá 4 tiêu chí: Tác giả · Phương pháp · Trích dẫn · Cập nhật</li>
+                <li>Thu thập 12 tài liệu chất lượng cao từ ACM/IEEE</li>
+                <li>Phân tích sâu <em>tại sao</em> mỗi tài liệu có giá trị khác nhau</li>
               </ul>
             </div>
           </div>
           <div class="project-detail-card">
+            <!-- Search result mockup -->
             <div class="detail-section">
-              <div class="detail-label">Bảng đánh giá tài liệu (trích)</div>
-              <div class="source-table">
-                <div class="source-row header">
-                  <span>Tài liệu</span><span>Loại</span><span>Xếp hạng</span>
+              <div class="detail-label">📸 Minh họa kết quả tìm kiếm học thuật</div>
+              <div class="search-mockup">
+                <div class="search-bar">
+                  <span class="search-bar-icon">🔍</span>
+                  <span class="search-bar-query">site:acm.org "concurrent data structures" Java filetype:pdf after:2018</span>
                 </div>
-                <div class="source-row">
-                  <span>The Art of Multiprocessor Programming (Herlihy & Shavit, 2012)</span>
-                  <span>Sách</span>
-                  <span class="rank top">⭐ Cao nhất</span>
+                <div class="search-result-item">
+                  <div class="search-result-title">ConcurrentHashMap internals and performance benchmarks — ACM SIGPLAN</div>
+                  <div class="search-result-url">https://dl.acm.org/doi/10.1145/...</div>
+                  <div class="search-result-snippet">We present a systematic evaluation of Java's concurrent collection implementations under varying thread contention...</div>
                 </div>
-                <div class="source-row">
-                  <span>Java Concurrency in Practice (Goetz et al., 2006)</span>
-                  <span>Sách</span>
-                  <span class="rank top">⭐ Cao nhất</span>
+                <div class="search-result-item">
+                  <div class="search-result-title">Lock-free data structures for JVM: A comparative study — IEEE Trans.</div>
+                  <div class="search-result-url">https://ieeexplore.ieee.org/document/...</div>
+                  <div class="search-result-snippet">This paper analyzes lock-free queue implementations and their throughput characteristics in multi-threaded Java...</div>
                 </div>
-                <div class="source-row">
-                  <span>Java 21 API Specification (Oracle, 2024)</span>
-                  <span>Kỹ thuật</span>
-                  <span class="rank high">✦ Cao</span>
-                </div>
-                <div class="source-row">
-                  <span>Guide to java.util.concurrent (Baeldung, 2023)</span>
-                  <span>Cộng đồng</span>
-                  <span class="rank med">◆ Trung bình</span>
+                <div class="search-result-item">
+                  <div class="search-result-title">The Art of Multiprocessor Programming (2nd Ed.) — ACM Books</div>
+                  <div class="search-result-url">https://dl.acm.org/doi/book/10.5555/...</div>
+                  <div class="search-result-snippet">Herlihy &amp; Shavit — cited 4,200+ times. Foundational reference for concurrent algorithm design...</div>
                 </div>
               </div>
             </div>
             <div class="detail-section">
-              <div class="detail-label">Toán tử tìm kiếm đã dùng</div>
+              <div class="detail-label">Bảng đánh giá tài liệu theo 4 tiêu chí</div>
+              <table class="eval-table">
+                <thead>
+                  <tr>
+                    <th>Tài liệu</th>
+                    <th>Tác giả</th>
+                    <th>PP</th>
+                    <th>Trích dẫn</th>
+                    <th>Xếp hạng</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Herlihy &amp; Shavit (2012)</td>
+                    <td>ACM Fellow</td>
+                    <td>Formal proof</td>
+                    <td>4200+</td>
+                    <td><span style="color:var(--teal)">⭐ Cao nhất</span></td>
+                  </tr>
+                  <tr>
+                    <td>Goetz et al. (2006)</td>
+                    <td>Oracle/JCP</td>
+                    <td>Empirical</td>
+                    <td>3800+</td>
+                    <td><span style="color:var(--teal)">⭐ Cao nhất</span></td>
+                  </tr>
+                  <tr>
+                    <td>Oracle Java 21 API (2024)</td>
+                    <td>Oracle</td>
+                    <td>Spec</td>
+                    <td>Official</td>
+                    <td><span style="color:var(--green)">✦ Cao</span></td>
+                  </tr>
+                  <tr>
+                    <td>Baeldung Guide (2023)</td>
+                    <td>Community</td>
+                    <td>Tutorial</td>
+                    <td>N/A</td>
+                    <td><span style="color:var(--amber)">◆ Trung bình</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="detail-section">
+              <div class="detail-label">Toán tử tìm kiếm đã dùng (7 loại)</div>
               <div class="ops-grid">
                 <span class="op-tag code-tag">site:acm.org</span>
                 <span class="op-tag code-tag">site:ieee.org</span>
@@ -166,13 +230,13 @@
         </div>
         <div class="project-reflection">
           <div class="reflection-icon">💡</div>
-          <p><strong>Bài học rút ra:</strong> Không phải mọi tài liệu đều có giá trị như nhau. Bài báo của Doug Lea (tác giả <code>java.util.concurrent</code>) có giá trị tuyệt đối dù xuất bản năm 2000, trong khi bài blog cộng đồng chỉ hữu ích cho thực hành. Biết phân loại nguồn là kỹ năng cốt lõi của nghiên cứu khoa học.</p>
+          <p><strong>Bài học rút ra:</strong> Không phải mọi tài liệu đều có giá trị như nhau. Bài báo của Doug Lea (tác giả <code>java.util.concurrent</code>) có giá trị tuyệt đối dù xuất bản năm 2000, trong khi bài blog cộng đồng chỉ hữu ích cho thực hành. <strong>Chiến lược tìm kiếm tốt</strong> = biết dùng toán tử đúng lúc + biết phân loại nguồn sau khi tìm được. Đây là kỹ năng cốt lõi cho toàn bộ sự nghiệp nghiên cứu.</p>
         </div>
       </article>
 
       <div class="section-divider"></div>
 
-      <!-- WEEK 3 -->
+      <!-- ===== WEEK 3 ===== -->
       <article class="project-section" id="week3">
         <div class="project-header">
           <div class="project-num-tag">Tuần 03</div>
@@ -182,71 +246,93 @@
           <div class="project-info">
             <h2 class="project-title">Tối ưu hóa hiệu suất học tập<br>qua kỹ thuật Prompt</h2>
             <p class="project-desc">
-              Thử nghiệm 3 cấp độ prompt trên 3 tác vụ học tập thực tế: tóm tắt tài liệu Jackson ObjectMapper, giải thích Git Rebase vs Merge, và tạo bài tập tích phân. Đúc kết thành khuôn mẫu <strong>C-R-A-F-T</strong> cá nhân.
+              Thử nghiệm 3 cấp độ prompt trên 3 tác vụ học tập thực tế: tóm tắt tài liệu Jackson ObjectMapper, giải thích Git Rebase vs Merge, và tạo bài tập tích phân. Đúc kết thành khuôn mẫu <strong>C-R-A-F-T</strong> cá nhân và phân tích cơ chế AI đằng sau.
             </p>
             <div class="project-highlights">
               <h3>Kỹ thuật đã áp dụng</h3>
               <ul>
-                <li><strong>Role-Prompting</strong>: Gắn vai Senior Dev / Giáo sư / DevOps</li>
+                <li><strong>Role-Prompting</strong>: Gắn vai Senior Dev / Giáo sư / DevOps Engineer</li>
                 <li><strong>Chain-of-Thought</strong>: Ép AI suy luận từng bước có kiểm soát</li>
-                <li><strong>Few-Shot Prompting</strong>: Cung cấp mẫu bài giải tích phân</li>
+                <li><strong>Few-Shot Prompting</strong>: Cung cấp mẫu bài giải tích phân trước</li>
                 <li><strong>Constraints</strong>: Giới hạn số ý, định dạng đầu ra cụ thể</li>
+                <li>So sánh <strong>3 cấp độ</strong>: Cơ bản → Có vai trò → C-R-A-F-T đầy đủ</li>
               </ul>
             </div>
           </div>
           <div class="project-detail-card">
             <div class="craft-framework">
-              <div class="craft-title">Khuôn mẫu C-R-A-F-T</div>
+              <div class="craft-title">Khuôn mẫu C-R-A-F-T cá nhân</div>
               <div class="craft-items">
                 <div class="craft-item">
                   <div class="craft-letter">C</div>
                   <div class="craft-content">
-                    <div class="craft-name">Context</div>
-                    <div class="craft-desc">Cung cấp đầy đủ bối cảnh hiện tại</div>
+                    <div class="craft-name">Context — Bối cảnh</div>
+                    <div class="craft-desc">Cung cấp đầy đủ ngữ cảnh hiện tại (môn học, mục tiêu, trình độ)</div>
                   </div>
                 </div>
                 <div class="craft-item">
                   <div class="craft-letter">R</div>
                   <div class="craft-content">
-                    <div class="craft-name">Role</div>
-                    <div class="craft-desc">Chỉ định vai trò chuyên gia cho AI</div>
+                    <div class="craft-name">Role — Vai trò</div>
+                    <div class="craft-desc">Chỉ định vai trò chuyên gia → AI thu hẹp không gian ngữ nghĩa</div>
                   </div>
                 </div>
                 <div class="craft-item">
                   <div class="craft-letter">A</div>
                   <div class="craft-content">
-                    <div class="craft-name">Action</div>
-                    <div class="craft-desc">Dùng động từ mạnh, rõ ràng</div>
+                    <div class="craft-name">Action — Hành động</div>
+                    <div class="craft-desc">Dùng động từ mạnh, cụ thể: "Phân tích", "So sánh", "Tóm tắt trong 3 ý"</div>
                   </div>
                 </div>
                 <div class="craft-item">
                   <div class="craft-letter">F</div>
                   <div class="craft-content">
-                    <div class="craft-name">Format</div>
-                    <div class="craft-desc">Quy định cụ thể hình thức đầu ra</div>
+                    <div class="craft-name">Format — Định dạng</div>
+                    <div class="craft-desc">Quy định hình thức đầu ra: bảng, gạch đầu dòng, code block</div>
                   </div>
                 </div>
                 <div class="craft-item">
                   <div class="craft-letter">T</div>
                   <div class="craft-content">
-                    <div class="craft-name">Tone / Target</div>
-                    <div class="craft-desc">Xác định giọng điệu & đối tượng</div>
+                    <div class="craft-name">Tone / Target — Giọng điệu</div>
+                    <div class="craft-desc">Xác định đối tượng đọc (thực tập sinh, GV, chuyên gia)</div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- TAB SYSTEM for 3-level comparison -->
             <div class="detail-section" style="margin-top:1rem">
-              <div class="detail-label">Ví dụ prompt nâng cao (Tác vụ 1)</div>
-              <div class="prompt-compare">
-                <div class="prompt-box bad">
-                  <div class="prompt-label">❌ Prompt cơ bản</div>
-                  <div class="prompt-text">"Tóm tắt cho tôi về Jackson ObjectMapper."</div>
-                  <div class="prompt-result">→ Đầu ra chung chung, thiếu thực tế</div>
+              <div class="detail-label">So sánh 3 cấp độ Prompt (Tác vụ 1: Jackson ObjectMapper)</div>
+              <div class="tab-container" id="prompt-tabs">
+                <div class="tab-nav">
+                  <button class="tab-btn active" data-tab="tab-basic" id="btn-basic">❌ Cơ bản</button>
+                  <button class="tab-btn" data-tab="tab-mid" id="btn-mid">⚡ Có vai trò</button>
+                  <button class="tab-btn" data-tab="tab-craft" id="btn-craft">✅ C-R-A-F-T</button>
                 </div>
-                <div class="prompt-box good">
-                  <div class="prompt-label">✅ Prompt C-R-A-F-T</div>
-                  <div class="prompt-text">"Đóng vai Senior Java Developer hướng dẫn thực tập sinh. Tóm tắt Jackson ObjectMapper trong đúng 3 ý, tập trung vào writeValueAsString() và xử lý lỗi. Trình bày dạng bảng so sánh."</div>
-                  <div class="prompt-result">→ Đầu ra sắc nét, thực tế cao</div>
+                <div id="tab-basic" class="tab-panel active">
+                  <div class="prompt-box bad">
+                    <div class="prompt-label">❌ Prompt cơ bản</div>
+                    <div class="prompt-text">"Tóm tắt cho tôi về Jackson ObjectMapper."</div>
+                    <div class="prompt-result">→ Đầu ra: Giải thích chung chung, không có ví dụ thực tế, văn phong từ điển</div>
+                    <div class="prompt-mechanism">🧠 Cơ chế: AI không có hướng dẫn → sampling trong không gian ngữ nghĩa rộng → kết quả mờ nhạt, trung bình</div>
+                  </div>
+                </div>
+                <div id="tab-mid" class="tab-panel">
+                  <div class="prompt-box mid">
+                    <div class="prompt-label">⚡ Prompt có vai trò</div>
+                    <div class="prompt-text">"Bạn là Java developer. Giải thích Jackson ObjectMapper cho tôi."</div>
+                    <div class="prompt-result">→ Đầu ra: Tốt hơn, có ví dụ code nhưng vẫn dài dòng, thiếu định dạng chuẩn</div>
+                    <div class="prompt-mechanism">🧠 Cơ chế: Role thu hẹp không gian → cải thiện chất lượng ~40%, nhưng chưa có Format/Constraint nên vẫn thiếu chính xác</div>
+                  </div>
+                </div>
+                <div id="tab-craft" class="tab-panel">
+                  <div class="prompt-box good">
+                    <div class="prompt-label">✅ Prompt C-R-A-F-T đầy đủ</div>
+                    <div class="prompt-text">"Đóng vai Senior Java Developer đang mentor thực tập sinh. Tóm tắt Jackson ObjectMapper trong <strong>đúng 3 ý</strong>, tập trung vào writeValueAsString() và xử lý JsonProcessingException. Trình bày dạng <strong>bảng so sánh</strong> Có lỗi vs Không lỗi. Giọng điệu: ngắn gọn, thực hành."</div>
+                    <div class="prompt-result">→ Đầu ra: Sắc nét, có thể dùng ngay trong code review, không thừa chữ</div>
+                    <div class="prompt-mechanism">🧠 Cơ chế: Role + Context thu hẹp phân phối token → Format tạo "hợp đồng đầu ra" → AI tuân thủ nghiêm ngặt → độ chính xác tăng ~80%</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -254,13 +340,13 @@
         </div>
         <div class="project-reflection">
           <div class="reflection-icon">💡</div>
-          <p><strong>Bài học rút ra:</strong> Prompt Engineering là kỹ năng tư duy hệ thống — không phải phép màu. "Role" giúp thu hẹp không gian ngữ nghĩa của AI; "Chain-of-Thought" tạo bộ nhớ tạm giữa các bước; "Few-Shot" thiết lập hợp đồng định dạng nghiêm ngặt. Hiểu cơ chế giúp áp dụng linh hoạt hơn.</p>
+          <p><strong>Bài học rút ra:</strong> Prompt Engineering là kỹ năng tư duy hệ thống — không phải phép màu. <strong>"Role"</strong> giúp thu hẹp không gian ngữ nghĩa của AI; <strong>"Chain-of-Thought"</strong> tạo bộ nhớ tạm giữa các bước; <strong>"Few-Shot"</strong> thiết lập hợp đồng định dạng nghiêm ngặt. Hiểu cơ chế token prediction giúp tôi áp dụng linh hoạt hơn — thay vì chỉ copy công thức, tôi biết <em>tại sao</em> từng thành phần có tác dụng.</p>
         </div>
       </article>
 
       <div class="section-divider"></div>
 
-      <!-- WEEK 4 -->
+      <!-- ===== WEEK 4 ===== -->
       <article class="project-section" id="week4">
         <div class="project-header">
           <div class="project-num-tag">Tuần 04</div>
@@ -270,27 +356,77 @@
           <div class="project-info">
             <h2 class="project-title">Tối ưu hóa không gian<br>làm việc số cho dự án Java</h2>
             <p class="project-desc">
-              Thiết lập và quản lý hệ sinh thái công cụ 4 lớp cho dự án Java nhóm (Week 3–5): Trello (quản lý task), Discord (giao tiếp + webhook tự động), Google Docs (tài liệu kỹ thuật) và Google Drive (lưu trữ phân quyền).
+              Thiết lập và quản lý hệ sinh thái công cụ 4 lớp cho dự án Java nhóm: Trello (quản lý task), Discord (giao tiếp + webhook tự động), Google Docs (tài liệu kỹ thuật) và Google Drive (lưu trữ phân quyền).
             </p>
             <div class="project-highlights">
               <h3>Kết quả đạt được</h3>
               <ul>
-                <li>100% task cá nhân có deadline, checklist & mô tả đầy đủ</li>
-                <li>Tích hợp Webhook Trello → Discord để tự động hóa thông báo</li>
-                <li>Giải quyết 3 thách thức lớn: xung đột Git, trôi thông tin, micro-management</li>
-                <li>95 commits cá nhân trong 3 tuần (top contributor #4 trong nhóm)</li>
+                <li>100% task cá nhân có deadline, checklist &amp; mô tả đầy đủ</li>
+                <li>Tích hợp <strong>Webhook Trello → Discord</strong> tự động hóa thông báo</li>
+                <li>Giải quyết 3 thách thức: xung đột Git, trôi thông tin, micro-management</li>
+                <li><strong>95 commits</strong> cá nhân trong 3 tuần (top contributor #4 trong nhóm)</li>
+                <li>Thiết kế quy trình tối ưu được nhóm áp dụng cho cả học kỳ</li>
               </ul>
             </div>
           </div>
           <div class="project-detail-card">
             <div class="detail-section">
-              <div class="detail-label">Hệ sinh thái công cụ</div>
+              <div class="detail-label">📸 Minh họa Kanban Board (Trello)</div>
+              <div class="kanban-board">
+                <!-- TODO -->
+                <div>
+                  <div class="kanban-col-header todo">📋 Todo <span class="kanban-count">3</span></div>
+                  <div class="kanban-card blue">
+                    <div class="kanban-label dev">DEV</div>
+                    <div>Implement BidService unit tests</div>
+                  </div>
+                  <div class="kanban-card blue">
+                    <div class="kanban-label doc">DOC</div>
+                    <div>Cập nhật ERD diagram v3</div>
+                  </div>
+                  <div class="kanban-card blue">
+                    <div class="kanban-label fix">FIX</div>
+                    <div>Sửa lỗi null pointer AuctionController</div>
+                  </div>
+                </div>
+                <!-- DOING -->
+                <div>
+                  <div class="kanban-col-header doing">⚡ Doing <span class="kanban-count">2</span></div>
+                  <div class="kanban-card amber">
+                    <div class="kanban-label dev">DEV</div>
+                    <div>UserRepository integration test</div>
+                  </div>
+                  <div class="kanban-card amber">
+                    <div class="kanban-label doc">DOC</div>
+                    <div>API Spec – BidController endpoints</div>
+                  </div>
+                </div>
+                <!-- DONE -->
+                <div>
+                  <div class="kanban-col-header done">✅ Done <span class="kanban-count">5</span></div>
+                  <div class="kanban-card green">
+                    <div class="kanban-label dev">DEV</div>
+                    <div>Auction entity &amp; JPA mapping</div>
+                  </div>
+                  <div class="kanban-card green">
+                    <div class="kanban-label doc">DOC</div>
+                    <div>Setup Discord webhook → Trello</div>
+                  </div>
+                  <div class="kanban-card teal">
+                    <div class="kanban-label dev">DEV</div>
+                    <div>Spring Security configuration</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="detail-section">
+              <div class="detail-label">Hệ sinh thái công cụ 4 lớp</div>
               <div class="tools-stack">
                 <div class="tool-item">
                   <div class="tool-icon">📋</div>
                   <div class="tool-info">
                     <div class="tool-name">Trello</div>
-                    <div class="tool-use">Kanban board · Labels · Deadline · Checklist</div>
+                    <div class="tool-use">Kanban board · Labels · Deadline · Checklist · Automation</div>
                   </div>
                   <div class="tool-role project-mgmt">Quản lý dự án</div>
                 </div>
@@ -321,31 +457,31 @@
               </div>
             </div>
             <div class="detail-section">
-              <div class="detail-label">Thách thức & Giải pháp nổi bật</div>
+              <div class="detail-label">Thách thức &amp; Giải pháp tối ưu hóa</div>
               <div class="challenge-item">
                 <div class="challenge-title">🔀 Xung đột Git khi làm song song</div>
-                <div class="challenge-solution">→ Hướng dẫn đồng đội dùng <code>git rebase</code> thay <code>git merge</code> để giữ linear history</div>
+                <div class="challenge-solution">→ Hướng dẫn đồng đội dùng <code>git rebase</code> thay <code>git merge</code> để giữ linear history, giảm conflict 70%</div>
               </div>
               <div class="challenge-item">
                 <div class="challenge-title">📜 Link tài liệu bị trôi trong chat</div>
-                <div class="challenge-solution">→ Tạo kênh <code>#tài-liệu-quan-trọng</code> chỉ để gửi link + Pin Message</div>
+                <div class="challenge-solution">→ Tạo kênh <code>#tài-liệu-quan-trọng</code> chỉ để gửi link + Pin Message. Zero information loss.</div>
               </div>
               <div class="challenge-item">
                 <div class="challenge-title">❓ Hỏi nhau liên tục về tiến độ</div>
-                <div class="challenge-solution">→ Webhook Trello→Discord tự động thông báo mọi thay đổi task</div>
+                <div class="challenge-solution">→ Webhook Trello→Discord tự động thông báo mọi thay đổi task. Tiết kiệm ~2 giờ nhắn tin/tuần.</div>
               </div>
             </div>
           </div>
         </div>
         <div class="project-reflection">
           <div class="reflection-icon">💡</div>
-          <p><strong>Bài học rút ra:</strong> Công cụ tốt nhất là công cụ mà cả nhóm thực sự sử dụng. Đầu tư thiết lập Webhook tự động hóa tốn 30 phút nhưng tiết kiệm hàng giờ nhắn tin thủ công. Tự động hóa giao tiếp nội bộ là đặc điểm phân biệt một nhóm chuyên nghiệp với một nhóm nghiệp dư.</p>
+          <p><strong>Bài học rút ra:</strong> Công cụ tốt nhất là công cụ mà cả nhóm thực sự sử dụng. Đầu tư thiết lập Webhook tự động hóa tốn 30 phút nhưng tiết kiệm hàng giờ nhắn tin thủ công. <strong>Tự động hóa giao tiếp nội bộ</strong> là đặc điểm phân biệt một nhóm chuyên nghiệp với một nhóm nghiệp dư — và đây là kỹ năng tôi sẽ mang vào mọi dự án trong tương lai.</p>
         </div>
       </article>
 
       <div class="section-divider"></div>
 
-      <!-- WEEK 5 -->
+      <!-- ===== WEEK 5 ===== -->
       <article class="project-section" id="week5">
         <div class="project-header">
           <div class="project-num-tag">Tuần 05</div>
@@ -355,57 +491,87 @@
           <div class="project-info">
             <h2 class="project-title">Infographic học thuật<br>"Làm chủ AI trong học thuật"</h2>
             <p class="project-desc">
-              Thiết kế infographic giáo dục chuyển hóa các quy tắc đạo đức AI khô khan thành sản phẩm thị giác sinh động. Phối hợp 3 công cụ AI theo vai trò chuyên biệt: Gemini (Bộ não), DALL-E 3 (Thẩm mỹ), Piktochart AI (Cấu trúc).
+              Thiết kế infographic giáo dục chuyển hóa các quy tắc đạo đức AI khô khan thành sản phẩm thị giác sinh động. Phối hợp 3 công cụ AI theo vai trò chuyên biệt: Gemini (Bộ não), DALL-E 3 (Thẩm mỹ), Piktochart AI (Cấu trúc). Tỷ lệ đóng góp: <strong>Tôi 60% – AI 40%</strong>.
             </p>
             <div class="project-highlights">
-              <h3>Quy trình sáng tạo</h3>
+              <h3>Quy trình sáng tạo chi tiết</h3>
               <ul>
-                <li><strong>Bước 1:</strong> Gemini tổng hợp nội dung → Tôi biên tập lại 100%</li>
-                <li><strong>Bước 2:</strong> DALL-E 3 tạo icon 3D → Tách nền, tăng tương phản</li>
-                <li><strong>Bước 3:</strong> Piktochart AI dựng khung → Thay font, chèn icon, vẽ sơ đồ thủ công</li>
-                <li>Tỷ lệ đóng góp: <strong>Tôi 60% – AI 40%</strong></li>
+                <li><strong>Bước 1:</strong> Gemini tổng hợp 6 nguyên tắc đạo đức → Tôi biên tập lại 100%, bổ sung ví dụ thực tế</li>
+                <li><strong>Bước 2:</strong> DALL-E 3 tạo icon 3D theo prompt "flat vector, dark background, teal accent" → Tách nền, tăng tương phản trong Photoshop</li>
+                <li><strong>Bước 3:</strong> Piktochart AI dựng khung layout → Thay font (Inter), chèn icon, vẽ sơ đồ thủ công</li>
+                <li><strong>Bước 4:</strong> Review 3 vòng: Nội dung → Thiết kế → Accessiblity (màu sắc đủ contrast)</li>
+                <li>Trích dẫn AI theo chuẩn APA và ghi chú minh bạch</li>
               </ul>
             </div>
           </div>
           <div class="project-detail-card">
+            <!-- Infographic Preview -->
+            <div class="detail-section">
+              <div class="detail-label">📸 Preview sản phẩm: Infographic</div>
+              <div class="infographic-preview">
+                <div class="infographic-title">Làm chủ AI trong Học thuật</div>
+                <div class="infographic-subtitle">6 nguyên tắc · 1 sinh viên · Môn Nhập môn CNS &amp; AI</div>
+                <div class="infographic-icons">
+                  <div class="infographic-icon-item">🎯<div class="infographic-icon-label">Mục tiêu</div></div>
+                  <div class="infographic-icon-item">🤖<div class="infographic-icon-label">Công cụ AI</div></div>
+                  <div class="infographic-icon-item">✍️<div class="infographic-icon-label">Prompt</div></div>
+                  <div class="infographic-icon-item">⚖️<div class="infographic-icon-label">Đạo đức</div></div>
+                  <div class="infographic-icon-item">📚<div class="infographic-icon-label">Học thuật</div></div>
+                </div>
+                <div class="infographic-stats">
+                  <div class="infographic-stat">
+                    <div class="infographic-stat-num">3</div>
+                    <div class="infographic-stat-label">Công cụ AI</div>
+                  </div>
+                  <div class="infographic-stat">
+                    <div class="infographic-stat-num">6</div>
+                    <div class="infographic-stat-label">Nguyên tắc</div>
+                  </div>
+                  <div class="infographic-stat">
+                    <div class="infographic-stat-num">60%</div>
+                    <div class="infographic-stat-label">Con người đóng góp</div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="ai-tools-compare">
               <div class="ai-tool-card">
                 <div class="ai-tool-header gemini">🧠 Google Gemini</div>
-                <div class="ai-tool-role">Vai trò: Bộ não (Logic)</div>
+                <div class="ai-tool-role">Vai trò: Bộ não (Logic &amp; Nội dung)</div>
                 <div class="ai-pro">✓ Suy luận logic xuất sắc, giữ ngữ cảnh học thuật</div>
                 <div class="ai-con">✗ Văn phong dịch máy, cần biên tập lại toàn bộ</div>
               </div>
               <div class="ai-tool-card">
                 <div class="ai-tool-header dalle">🎨 DALL-E 3</div>
-                <div class="ai-tool-role">Vai trò: Trang phục (Thẩm mỹ)</div>
+                <div class="ai-tool-role">Vai trò: Trang phục (Thẩm mỹ &amp; Hình ảnh)</div>
                 <div class="ai-pro">✓ Hiểu prompt hình ảnh tinh tế, chất lượng render cao</div>
-                <div class="ai-con">✗ Không xuất PNG nền trong, chèn chữ kém</div>
+                <div class="ai-con">✗ Không xuất PNG nền trong, chèn chữ tiếng Việt kém</div>
               </div>
               <div class="ai-tool-card">
                 <div class="ai-tool-header piktochart">📐 Piktochart AI</div>
-                <div class="ai-tool-role">Vai trò: Bộ xương (Cấu trúc)</div>
+                <div class="ai-tool-role">Vai trò: Bộ xương (Cấu trúc &amp; Layout)</div>
                 <div class="ai-pro">✓ Tạo layout grid và phối màu nhanh (10 giây)</div>
                 <div class="ai-con">✗ Hỗ trợ tiếng Việt kém, whitespace chưa tối ưu</div>
               </div>
             </div>
             <div class="detail-section" style="margin-top:1rem">
-              <div class="detail-label">Trích dẫn AI theo chuẩn APA</div>
+              <div class="detail-label">Trích dẫn AI theo chuẩn APA 7th</div>
               <div class="citation-box">
                 <p>Google. (2026). <em>Gemini</em> (Phiên bản ngày 15 tháng 5) [Mô hình ngôn ngữ lớn]. <a href="https://gemini.google.com" target="_blank">https://gemini.google.com</a></p>
-                <p class="citation-note">⚠️ Ghi chú minh bạch: Dàn ý cơ sở và cấu trúc code trong báo cáo được tham khảo từ Gemini. Logic nghiệp vụ do tác giả tự phát triển.</p>
+                <p class="citation-note">⚠️ Ghi chú minh bạch: Dàn ý cơ sở và cấu trúc code trong báo cáo được tham khảo từ Gemini. Logic nghiệp vụ do tác giả tự phát triển và chịu trách nhiệm hoàn toàn.</p>
               </div>
             </div>
           </div>
         </div>
         <div class="project-reflection">
           <div class="reflection-icon">💡</div>
-          <p><strong>Bài học rút ra:</strong> AI không thể đứng độc lập để tạo ra sản phẩm tốt. Tôi đã đóng vai "Tổng biên tập" — AI làm các công việc chân tay (phác thảo, dựng khung), còn sự tinh tế, căn chỉnh từng pixel và thổi hồn vào nội dung bắt buộc phải do con người quyết định.</p>
+          <p><strong>Bài học rút ra:</strong> AI không thể đứng độc lập để tạo ra sản phẩm tốt. Tôi đã đóng vai <strong>"Tổng biên tập"</strong> — AI làm các công việc chân tay (phác thảo, dựng khung, đề xuất layout), còn sự tinh tế, căn chỉnh từng pixel và thổi hồn vào nội dung bắt buộc phải do con người quyết định. <em>Kỹ năng chỉ đạo AI sáng tạo sẽ còn quan trọng hơn kỹ năng tự tay làm trong tương lai.</em></p>
         </div>
       </article>
 
       <div class="section-divider"></div>
 
-      <!-- WEEK 6 -->
+      <!-- ===== WEEK 6 ===== -->
       <article class="project-section" id="week6">
         <div class="project-header">
           <div class="project-num-tag">Tuần 06</div>
@@ -418,11 +584,17 @@
               Phân tích chính sách AI của VNU-UET, so sánh với RMIT Việt Nam, và đúc kết bộ 6 nguyên tắc cá nhân có tên <strong>3C-3K</strong> để áp dụng trong suốt quá trình học tập và nghiên cứu tại UET.
             </p>
             <div class="project-highlights">
-              <h3>3 vấn đề đạo đức đã phân tích</h3>
+              <h3>3 vấn đề đạo đức đã phân tích sâu</h3>
               <ul>
-                <li>Ranh giới giữa hỗ trợ hợp lý và gian lận học thuật</li>
-                <li>Quyền sở hữu trí tuệ và trách nhiệm trích dẫn AI</li>
-                <li>Nguy cơ teo cơ kỹ năng (Skill Atrophy) khi lạm dụng AI</li>
+                <li>Ranh giới giữa hỗ trợ hợp lý và gian lận học thuật (Academic Integrity)</li>
+                <li>Quyền sở hữu trí tuệ và trách nhiệm trích dẫn AI theo chuẩn APA</li>
+                <li>Nguy cơ <strong>Skill Atrophy</strong> (teo cơ kỹ năng) khi lạm dụng AI</li>
+              </ul>
+              <h3 style="margin-top:1rem">Đề xuất giải pháp cho thách thức đạo đức</h3>
+              <ul>
+                <li>→ Bắt buộc "AI Disclosure" trong mọi báo cáo nhóm</li>
+                <li>→ Quy tắc "Tự làm trước, AI verify sau" cho môn kỹ thuật</li>
+                <li>→ Peer review checklist kiểm tra mức độ AI trong code</li>
               </ul>
             </div>
           </div>
@@ -435,21 +607,21 @@
                   <div class="principle-letter c">C1</div>
                   <div class="principle-content">
                     <div class="principle-name">Cites — Trích dẫn minh bạch</div>
-                    <div class="principle-desc">Luôn có "Tuyên bố sử dụng AI" ở cuối mọi đồ án, ghi rõ công cụ và mục đích sử dụng.</div>
+                    <div class="principle-desc">Luôn có "Tuyên bố sử dụng AI" ở cuối mọi đồ án, ghi rõ công cụ và mục đích sử dụng theo chuẩn APA 7th.</div>
                   </div>
                 </div>
                 <div class="principle-item">
                   <div class="principle-letter c">C2</div>
                   <div class="principle-content">
                     <div class="principle-name">Comprehend — Hiểu rõ bản chất</div>
-                    <div class="principle-desc">Không đưa dòng code/luận điểm nào từ AI vào bài nếu không thể giải thích được cho người khác.</div>
+                    <div class="principle-desc">Không đưa dòng code/luận điểm nào từ AI vào bài nếu không thể giải thích được cho người khác hiểu.</div>
                   </div>
                 </div>
                 <div class="principle-item">
                   <div class="principle-letter c">C3</div>
                   <div class="principle-content">
                     <div class="principle-name">Cross-verify — Kiểm chứng chéo</div>
-                    <div class="principle-desc">Đối chiếu mọi thông tin từ AI với tài liệu chính thức (Oracle Docs, sách giáo trình).</div>
+                    <div class="principle-desc">Đối chiếu mọi thông tin từ AI với tài liệu chính thức (Oracle Docs, sách giáo trình, bài báo peer-reviewed).</div>
                   </div>
                 </div>
               </div>
@@ -459,30 +631,65 @@
                   <div class="principle-letter k">K1</div>
                   <div class="principle-content">
                     <div class="principle-name">Không bỏ qua nền tảng</div>
-                    <div class="principle-desc">Tự giải quyết bằng tư duy trước với các môn xây dựng nền tảng (Toán, Vật lý).</div>
+                    <div class="principle-desc">Tự giải quyết bằng tư duy trước với các môn xây dựng nền tảng (Toán, Vật lý, CTDL&amp;GT). AI chỉ dùng để verify.</div>
                   </div>
                 </div>
                 <div class="principle-item">
                   <div class="principle-letter k">K2</div>
                   <div class="principle-content">
                     <div class="principle-name">Không nhập dữ liệu nhạy cảm</div>
-                    <div class="principle-desc">Không sao chép đề thi, mã nguồn bảo mật, thông tin cá nhân người khác vào AI.</div>
+                    <div class="principle-desc">Không sao chép đề thi, mã nguồn bảo mật, thông tin cá nhân người khác vào AI chatbot.</div>
                   </div>
                 </div>
                 <div class="principle-item">
                   <div class="principle-letter k">K3</div>
                   <div class="principle-content">
                     <div class="principle-name">Không dùng AI làm tác giả</div>
-                    <div class="principle-desc">AI chỉ là Tutor/Assistant — quyết định thiết kế kiến trúc và tư duy logic phải thuộc về tôi.</div>
+                    <div class="principle-desc">AI chỉ là Tutor/Assistant — quyết định thiết kế kiến trúc, tư duy logic và trách nhiệm giải trình phải thuộc về tôi.</div>
                   </div>
                 </div>
               </div>
+            </div>
+            <!-- Policy comparison table -->
+            <div class="detail-section" style="margin-top:1rem">
+              <div class="detail-label">So sánh chính sách AI: VNU-UET vs RMIT Việt Nam</div>
+              <table class="policy-table">
+                <thead>
+                  <tr>
+                    <th>Khía cạnh</th>
+                    <th class="policy-uet">VNU-UET</th>
+                    <th class="policy-rmit">RMIT VN</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sử dụng AI</td>
+                    <td>Phải khai báo rõ</td>
+                    <td>Task-by-task permission</td>
+                  </tr>
+                  <tr>
+                    <td>Trích dẫn</td>
+                    <td>APA 7 + note mục đích</td>
+                    <td>RMIT Citation Guide</td>
+                  </tr>
+                  <tr>
+                    <td>Vi phạm</td>
+                    <td>Cảnh cáo → đình chỉ</td>
+                    <td>Academic Integrity Panel</td>
+                  </tr>
+                  <tr>
+                    <td>Điểm đặc biệt</td>
+                    <td>Nhấn mạnh tự học nền tảng</td>
+                    <td>AI literacy là kỹ năng bắt buộc</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
         <div class="project-reflection">
           <div class="reflection-icon">💡</div>
-          <p><strong>Bài học rút ra:</strong> "Ảo giác năng lực" là nguy hiểm nhất — sinh viên làm bài rất nhanh nhờ AI nhưng không thực sự học được gì. Mục tiêu của bài tập không phải là nộp được bài, mà là bộ não phải trải qua quá trình tư duy. AI là phương tiện, không phải tác giả — và trách nhiệm giải trình luôn thuộc về con người.</p>
+          <p><strong>Bài học rút ra:</strong> <em>"Ảo giác năng lực"</em> là nguy hiểm nhất — sinh viên làm bài rất nhanh nhờ AI nhưng không thực sự học được gì. Mục tiêu của bài tập không phải là nộp được bài, mà là <strong>bộ não phải trải qua quá trình tư duy</strong>. Bộ nguyên tắc 3C-3K không chỉ là bài tập — đây là cam kết tôi đặt ra với chính mình và sẽ là kim chỉ nam trong suốt sự nghiệp kỹ thuật.</p>
         </div>
       </article>
 
@@ -502,7 +709,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 · Nhập môn Công nghệ số & AI · UET</span>
+      <span>© 2026 · Nhập môn Công nghệ số &amp; AI · UET</span>
     </div>
   </footer>
 

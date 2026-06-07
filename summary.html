@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tổng kết | Nguyễn Quốc Minh</title>
+  <title>Tổng kết | Nguyễn Quốc Minh – Nhìn lại 6 tuần học tập</title>
+  <meta name="description" content="Tổng kết và tự đánh giá sau 6 tuần học Nhập môn Công nghệ số & AI: những gì đã học, thách thức đã vượt qua, và ứng dụng trong tương lai.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <div id="scroll-progress"></div>
+  <button id="back-to-top" aria-label="Về đầu trang">↑</button>
 
   <nav class="nav" id="nav">
     <div class="nav-logo">QM<span class="dot">.</span></div>
@@ -23,7 +27,7 @@
   <div class="page-header">
     <div class="container">
       <div class="section-label">// Cuối hành trình</div>
-      <h1 class="page-title">Tổng kết &<br>Đánh giá bản thân</h1>
+      <h1 class="page-title">Tổng kết &amp;<br>Đánh giá bản thân</h1>
       <p class="page-subtitle">Nhìn lại 6 tuần · Những gì đã học · Những gì sẽ mang theo</p>
     </div>
   </div>
@@ -31,51 +35,157 @@
   <main class="summary-main">
     <div class="container">
 
-      <!-- SKILLS ACQUIRED -->
+      <!-- ===== SKILLS ACQUIRED ===== -->
       <section class="sum-section">
-        <div class="section-label">// Kiến thức & kỹ năng</div>
+        <div class="section-label">// Kiến thức &amp; kỹ năng</div>
         <h2 class="section-title">Những gì tôi đã học được</h2>
         <div class="skills-grid">
-          <div class="skill-card">
+          <div class="skill-card" style="--level:92%">
             <div class="skill-icon">📁</div>
-            <div class="skill-week">Tuần 1</div>
-            <div class="skill-name">Tổ chức dữ liệu</div>
+            <div class="skill-week">Tuần 1 · Quản lý dữ liệu</div>
+            <div class="skill-name">Tổ chức dữ liệu khoa học</div>
             <p>Xây dựng quy tắc đặt tên <code>[YYYYMMDD]_[TYPE]_[Name]</code> — đơn giản nhưng thay đổi hoàn toàn cách tôi quản lý file. Ngay lập tức áp dụng vào dự án Java nhóm và nhận được phản hồi tích cực từ đồng đội.</p>
+            <div class="skill-level">
+              <span class="skill-level-label">Mức độ thành thạo</span>
+              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+              <span class="skill-level-pct">92%</span>
+            </div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" style="--level:85%">
             <div class="skill-icon">🔍</div>
-            <div class="skill-week">Tuần 2</div>
+            <div class="skill-week">Tuần 2 · Nghiên cứu học thuật</div>
             <div class="skill-name">Tư duy học thuật</div>
-            <p>Lần đầu tiên tôi hiểu sự khác biệt thực sự giữa một blog bình thường và một bài báo peer-reviewed. Đây là kỹ năng nền tảng cho toàn bộ sự nghiệp nghiên cứu sau này.</p>
+            <p>Lần đầu tiên tôi hiểu sự khác biệt thực sự giữa một blog bình thường và một bài báo peer-reviewed. Biết dùng 7 toán tử tìm kiếm và đánh giá nguồn theo 4 tiêu chí khoa học.</p>
+            <div class="skill-level">
+              <span class="skill-level-label">Mức độ thành thạo</span>
+              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+              <span class="skill-level-pct">85%</span>
+            </div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" style="--level:95%">
             <div class="skill-icon">✍️</div>
-            <div class="skill-week">Tuần 3</div>
-            <div class="skill-name">Giao tiếp với AI</div>
-            <p>Khuôn mẫu C-R-A-F-T đã thay đổi cách tôi sử dụng AI từ "gõ câu hỏi ngẫu nhiên" sang "thiết kế yêu cầu có chủ đích". Năng suất học tập tăng đáng kể.</p>
+            <div class="skill-week">Tuần 3 · Prompt Engineering</div>
+            <div class="skill-name">Giao tiếp có chủ đích với AI</div>
+            <p>Khuôn mẫu C-R-A-F-T đã thay đổi cách tôi sử dụng AI từ "gõ câu hỏi ngẫu nhiên" sang "thiết kế yêu cầu có chủ đích". Hiểu cơ chế token prediction giúp áp dụng linh hoạt hơn.</p>
+            <div class="skill-level">
+              <span class="skill-level-label">Mức độ thành thạo</span>
+              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+              <span class="skill-level-pct">95%</span>
+            </div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" style="--level:80%">
             <div class="skill-icon">🤝</div>
-            <div class="skill-week">Tuần 4</div>
-            <div class="skill-name">Làm việc nhóm số</div>
+            <div class="skill-week">Tuần 4 · Digital Collaboration</div>
+            <div class="skill-name">Làm việc nhóm số hiệu quả</div>
             <p>Webhook tự động hóa đã xóa bỏ hoàn toàn tình trạng "hỏi nhau tiến độ thủ công". Tích hợp công cụ đúng cách quan trọng hơn số lượng công cụ sử dụng.</p>
+            <div class="skill-level">
+              <span class="skill-level-label">Mức độ thành thạo</span>
+              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+              <span class="skill-level-pct">80%</span>
+            </div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" style="--level:88%">
             <div class="skill-icon">🎨</div>
-            <div class="skill-week">Tuần 5</div>
+            <div class="skill-week">Tuần 5 · AI Content Creation</div>
             <div class="skill-name">Chỉ đạo sáng tạo AI</div>
             <p>Tôi học được cách đóng vai Art Director thay vì người thực thi — giao việc chân tay cho AI, giữ quyết định thẩm mỹ và tinh chỉnh cho bản thân. Đây là kỹ năng của tương lai.</p>
+            <div class="skill-level">
+              <span class="skill-level-label">Mức độ thành thạo</span>
+              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+              <span class="skill-level-pct">88%</span>
+            </div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" style="--level:93%">
             <div class="skill-icon">⚖️</div>
-            <div class="skill-week">Tuần 6</div>
+            <div class="skill-week">Tuần 6 · AI Ethics</div>
             <div class="skill-name">Đạo đức công nghệ</div>
-            <p>Khái niệm "Skill Atrophy" (teo cơ kỹ năng) thực sự đáng sợ và có thật. Bộ nguyên tắc 3C-3K không chỉ là bài tập — đây là cam kết tôi đặt ra với chính mình.</p>
+            <p>Khái niệm "Skill Atrophy" thực sự đáng sợ và có thật. Bộ nguyên tắc 3C-3K không chỉ là bài tập — đây là cam kết tôi đặt ra với chính mình, có thể vận dụng ngay trong doanh nghiệp.</p>
+            <div class="skill-level">
+              <span class="skill-level-label">Mức độ thành thạo</span>
+              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+              <span class="skill-level-pct">93%</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- CHALLENGES -->
+      <!-- ===== SELF-ASSESSMENT RADAR ===== -->
+      <section class="sum-section">
+        <div class="section-label">// Tự đánh giá</div>
+        <h2 class="section-title">Biểu đồ năng lực</h2>
+        <div class="radar-section">
+          <div class="radar-chart-wrap">
+            <svg id="radar-svg" class="radar-chart" viewBox="0 0 220 220"></svg>
+          </div>
+          <div>
+            <div class="radar-legend" style="margin-bottom:1.5rem">
+              <div class="radar-legend-item">
+                <div class="radar-dot" style="background:var(--teal)"></div>
+                <span class="radar-item-name">Tổ chức dữ liệu</span>
+                <span class="radar-item-score">4.5 / 5</span>
+              </div>
+              <div class="radar-legend-item">
+                <div class="radar-dot" style="background:var(--teal)"></div>
+                <span class="radar-item-name">Tìm kiếm học thuật</span>
+                <span class="radar-item-score">4.2 / 5</span>
+              </div>
+              <div class="radar-legend-item">
+                <div class="radar-dot" style="background:var(--teal)"></div>
+                <span class="radar-item-name">Prompt Engineering</span>
+                <span class="radar-item-score">4.8 / 5</span>
+              </div>
+              <div class="radar-legend-item">
+                <div class="radar-dot" style="background:var(--teal)"></div>
+                <span class="radar-item-name">Hợp tác trực tuyến</span>
+                <span class="radar-item-score">4.0 / 5</span>
+              </div>
+              <div class="radar-legend-item">
+                <div class="radar-dot" style="background:var(--teal)"></div>
+                <span class="radar-item-name">Sáng tạo nội dung AI</span>
+                <span class="radar-item-score">4.3 / 5</span>
+              </div>
+              <div class="radar-legend-item">
+                <div class="radar-dot" style="background:var(--teal)"></div>
+                <span class="radar-item-name">Đạo đức AI</span>
+                <span class="radar-item-score">4.6 / 5</span>
+              </div>
+            </div>
+            <!-- Assessment metric bars -->
+            <div class="assessment-metrics">
+              <div class="assessment-metric-item" style="--score:90%">
+                <div class="assessment-metric-label">
+                  <span class="assessment-metric-name">Kiến thức lý thuyết</span>
+                  <span class="assessment-metric-score">9.0 / 10</span>
+                </div>
+                <div class="assessment-bar"><div class="assessment-bar-fill"></div></div>
+              </div>
+              <div class="assessment-metric-item" style="--score:85%">
+                <div class="assessment-metric-label">
+                  <span class="assessment-metric-name">Ứng dụng thực tiễn</span>
+                  <span class="assessment-metric-score">8.5 / 10</span>
+                </div>
+                <div class="assessment-bar"><div class="assessment-bar-fill"></div></div>
+              </div>
+              <div class="assessment-metric-item" style="--score:80%">
+                <div class="assessment-metric-label">
+                  <span class="assessment-metric-name">Tư duy phản biện</span>
+                  <span class="assessment-metric-score">8.0 / 10</span>
+                </div>
+                <div class="assessment-bar"><div class="assessment-bar-fill"></div></div>
+              </div>
+              <div class="assessment-metric-item" style="--score:95%">
+                <div class="assessment-metric-label">
+                  <span class="assessment-metric-name">Chất lượng Portfolio</span>
+                  <span class="assessment-metric-score">9.5 / 10</span>
+                </div>
+                <div class="assessment-bar"><div class="assessment-bar-fill"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHALLENGES ===== -->
       <section class="sum-section">
         <div class="section-label">// Thách thức</div>
         <h2 class="section-title">Những điều khó nhất</h2>
@@ -84,27 +194,27 @@
             <div class="challenge-big-num">01</div>
             <div class="challenge-big-content">
               <h3>Kháng cự thói quen cũ</h3>
-              <p>Khó khăn lớn nhất không phải là học công cụ mới, mà là bỏ thói quen đặt tên file tùy tiện đã có từ cấp 3. Phải tự nhắc nhở trong 2 tuần đầu trước khi nó trở thành tự động.</p>
+              <p>Khó khăn lớn nhất không phải là học công cụ mới, mà là bỏ thói quen đặt tên file tùy tiện đã có từ cấp 3. Phải tự nhắc nhở trong 2 tuần đầu trước khi nó trở thành tự động. <strong>Bài học:</strong> Thay đổi thói quen cũ khó hơn học kỹ năng mới — cần kiên nhẫn và có hệ thống nhắc nhở.</p>
             </div>
           </div>
           <div class="challenge-big">
             <div class="challenge-big-num">02</div>
             <div class="challenge-big-content">
-              <h3>Ranh giới sử dụng AI</h3>
-              <p>Trong tuần 3 và 6, tôi đã phải dừng lại và tự hỏi: "Đây là tôi đang học, hay đang để AI học thay tôi?" Việc xác định ranh giới sử dụng AI hợp lý đòi hỏi sự tự giác cao và không có câu trả lời đen trắng rõ ràng.</p>
+              <h3>Ranh giới sử dụng AI hợp lý</h3>
+              <p>Trong tuần 3 và 6, tôi đã phải dừng lại và tự hỏi: "Đây là tôi đang học, hay đang để AI học thay tôi?" Việc xác định ranh giới sử dụng AI hợp lý đòi hỏi sự tự giác cao. <strong>Giải pháp tôi đã áp dụng:</strong> Quy tắc "Nghĩ xong mới hỏi AI" — bắt buộc tự phác thảo giải pháp trước khi nhờ AI.</p>
             </div>
           </div>
           <div class="challenge-big">
             <div class="challenge-big-num">03</div>
             <div class="challenge-big-content">
-              <h3>Xây dựng portfolio từ đầu</h3>
-              <p>Lần đầu tự code một trang web hoàn chỉnh thay vì dùng Notion hay Wix. Mất nhiều thời gian hơn dự kiến nhưng kết quả hoàn toàn xứng đáng — tôi kiểm soát 100% mọi thứ.</p>
+              <h3>Xây dựng portfolio từ đầu bằng code</h3>
+              <p>Lần đầu tự code một trang web hoàn chỉnh thay vì dùng Notion hay Wix. Mất nhiều thời gian hơn dự kiến nhưng kết quả hoàn toàn xứng đáng — tôi kiểm soát 100% mọi thứ và học được CSS/JS trong quá trình đó. <strong>Giá trị thêm:</strong> Portfolio này cũng là sản phẩm kỹ thuật thực sự.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- GROWTH -->
+      <!-- ===== GROWTH ===== -->
       <section class="sum-section">
         <div class="section-label">// Trưởng thành</div>
         <h2 class="section-title">Tôi đã thay đổi như thế nào</h2>
@@ -130,7 +240,7 @@
             <div class="growth-arrow">→</div>
             <div class="growth-marker after">Sau</div>
             <div class="growth-content">
-              <div class="growth-text">Thiết kế prompt có vai trò, bối cảnh, định dạng; kiểm chứng đầu ra; ghi chú trích dẫn</div>
+              <div class="growth-text">Thiết kế prompt có vai trò, bối cảnh, định dạng; kiểm chứng đầu ra; ghi chú trích dẫn APA</div>
             </div>
           </div>
           <div class="growth-item">
@@ -145,43 +255,56 @@
               <div class="growth-text">Webhook tự động hóa, kênh chuyên biệt, Kanban board cập nhật thời gian thực</div>
             </div>
           </div>
+          <div class="growth-item">
+            <div class="growth-marker before">Trước</div>
+            <div class="growth-content">
+              <div class="growth-area">Nghiên cứu</div>
+              <div class="growth-text">Google → Wikipedia → blog ngẫu nhiên → coi là đủ nguồn</div>
+            </div>
+            <div class="growth-arrow">→</div>
+            <div class="growth-marker after">Sau</div>
+            <div class="growth-content">
+              <div class="growth-text">IEEE/ACM với toán tử nâng cao → đánh giá 4 tiêu chí → phân loại uy tín → trích dẫn chuẩn APA</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- FUTURE -->
+      <!-- ===== FUTURE ===== -->
       <section class="sum-section">
         <div class="section-label">// Tương lai</div>
         <h2 class="section-title">Tôi sẽ mang theo những gì</h2>
         <div class="future-grid">
           <div class="future-card short">
-            <div class="future-horizon">Ngắn hạn (HK tiếp theo)</div>
+            <div class="future-horizon">Ngắn hạn (Học kỳ tiếp theo)</div>
             <ul>
               <li>Áp dụng quy tắc đặt file cho 100% tài liệu học tập</li>
               <li>Dùng C-R-A-F-T mỗi khi tương tác với AI trong học tập</li>
               <li>Thiết lập Kanban cho tất cả đồ án nhóm từ ngày đầu</li>
+              <li>Mở rộng kỹ năng tìm kiếm sang Semantic Scholar, ArXiv</li>
             </ul>
           </div>
           <div class="future-card long">
-            <div class="future-horizon">Dài hạn (Sự nghiệp)</div>
+            <div class="future-horizon">Dài hạn (Sự nghiệp Software Engineer)</div>
             <ul>
               <li>Kỹ năng tìm kiếm học thuật cho luận văn và nghiên cứu</li>
               <li>Nguyên tắc 3C-3K trong môi trường doanh nghiệp thực tế</li>
               <li>Tư duy "AI là công cụ, con người là tác giả" trong mọi dự án</li>
-              <li>Portfolio này sẽ là nền tảng cho CV kỹ thuật sau này</li>
+              <li>Portfolio này sẽ là nền tảng cho CV kỹ thuật sau khi tốt nghiệp</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- CLOSING QUOTE -->
+      <!-- ===== CLOSING QUOTE ===== -->
       <section class="sum-closing">
         <blockquote class="closing-quote">
           <p>"Môn học này không dạy tôi cách dùng công cụ — nó dạy tôi cách <em>tư duy</em> về công cụ. Đó là sự khác biệt giữa một người biết gõ lệnh và một người biết giải quyết vấn đề."</p>
-          <cite>— Nguyễn Quốc Minh, MSV 25020272</cite>
+          <cite>— Nguyễn Quốc Minh, MSV 25020272 · UET–VNU · 2026</cite>
         </blockquote>
         <div class="closing-nav">
-          <a href="index.html" class="btn-ghost">← Trang chủ</a>
-          <a href="projects.html" class="btn-primary">Xem bài tập →</a>
+          <a href="index.html" class="btn-ghost" id="nav-home">← Trang chủ</a>
+          <a href="projects.html" class="btn-primary" id="nav-projects">Xem bài tập →</a>
         </div>
       </section>
 
@@ -201,10 +324,23 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 · Nhập môn Công nghệ số & AI · UET</span>
+      <span>© 2026 · Nhập môn Công nghệ số &amp; AI · UET</span>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // Animate assessment bars when visible
+    const assessObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          assessObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.assessment-metric-item').forEach(el => assessObs.observe(el));
+  </script>
 </body>
 </html>

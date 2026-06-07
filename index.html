@@ -3,12 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio | Nguyễn Quốc Minh</title>
+  <title>Portfolio | Nguyễn Quốc Minh – Nhập môn Công nghệ số & AI</title>
+  <meta name="description" content="Portfolio kỹ thuật số của Nguyễn Quốc Minh (MSV 25020272), sinh viên CNTT UET–VNU, ghi lại hành trình 6 tuần học Nhập môn Công nghệ số & AI.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress"></div>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Về đầu trang">↑</button>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
@@ -25,7 +32,7 @@
   <section class="hero">
     <div class="hero-grid-bg"></div>
     <div class="hero-content">
-      <div class="hero-tag fade-in delay-1">Nhập môn Công nghệ số & AI</div>
+      <div class="hero-tag fade-in delay-1">Nhập môn Công nghệ số &amp; AI</div>
       <h1 class="hero-name fade-in delay-2">Nguyễn<br><em>Quốc Minh</em></h1>
       <div class="hero-meta fade-in delay-3">
         <span class="meta-item"><span class="meta-label">MSV</span> 25020272</span>
@@ -40,8 +47,27 @@
         và ứng dụng Trí tuệ Nhân tạo trong môi trường học thuật.
       </p>
       <div class="hero-cta fade-in delay-5">
-        <a href="projects.html" class="btn-primary">Xem bài tập →</a>
-        <a href="summary.html" class="btn-ghost">Tổng kết</a>
+        <a href="projects.html" class="btn-primary" id="cta-projects">Xem bài tập →</a>
+        <a href="summary.html" class="btn-ghost" id="cta-summary">Tổng kết</a>
+      </div>
+      <!-- STAT COUNTERS -->
+      <div class="hero-stats fade-in delay-5">
+        <div class="stat-item" id="stat-weeks">
+          <div class="stat-num" data-target="6" data-suffix="">0</div>
+          <div class="stat-label">Tuần học</div>
+        </div>
+        <div class="stat-item" id="stat-tasks">
+          <div class="stat-num" data-target="6" data-suffix="">0</div>
+          <div class="stat-label">Kỹ năng</div>
+        </div>
+        <div class="stat-item" id="stat-docs">
+          <div class="stat-num" data-target="12" data-suffix="">0</div>
+          <div class="stat-label">Tài liệu học thuật</div>
+        </div>
+        <div class="stat-item" id="stat-commits">
+          <div class="stat-num" data-target="95" data-suffix="+">0</div>
+          <div class="stat-label">Git commits</div>
+        </div>
       </div>
     </div>
     <div class="hero-visual fade-in delay-3">
@@ -56,7 +82,7 @@
   <span class="key">"school"</span>: <span class="str">"UET – VNU"</span>,
   <span class="key">"skills"</span>: [
     <span class="str">"File Management"</span>,
-    <span class="str">"Research & Evaluation"</span>,
+    <span class="str">"Research &amp; Evaluation"</span>,
     <span class="str">"Prompt Engineering"</span>,
     <span class="str">"Online Collaboration"</span>,
     <span class="str">"AI Content Creation"</span>,
@@ -77,15 +103,16 @@
           <h2 class="section-title">Mục tiêu<br>học tập</h2>
           <p>Là sinh viên năm nhất ngành Công nghệ Thông tin tại UET, tôi xây dựng portfolio này như một <strong>bản đồ hành trình</strong> học tập — không chỉ lưu trữ kết quả mà còn phản ánh quá trình tư duy, thách thức và trưởng thành.</p>
           <p>Định hướng phát triển của tôi là trở thành một <strong>Software Engineer</strong> có nền tảng lý thuyết vững chắc, kết hợp với kỹ năng ứng dụng AI một cách có trách nhiệm trong thực tiễn nghề nghiệp.</p>
+          <p>Portfolio này được xây dựng hoàn toàn bằng <strong>HTML, CSS và JavaScript thuần</strong> — không dùng template hay builder — thể hiện cam kết học từ nền tảng.</p>
         </div>
         <div class="about-goals">
           <div class="goal-card">
             <div class="goal-icon">🎯</div>
             <div class="goal-title">Mục đích Portfolio</div>
             <ul class="goal-list">
-              <li>Thể hiện các kỹ năng số đã học</li>
-              <li>Lưu trữ sản phẩm cá nhân dễ truy cập</li>
-              <li>Chia sẻ hành trình học tập với giảng viên</li>
+              <li>Thể hiện các kỹ năng số đã học qua 6 nhiệm vụ</li>
+              <li>Lưu trữ sản phẩm cá nhân dễ truy cập, dễ chia sẻ</li>
+              <li>Chia sẻ hành trình học tập với giảng viên đánh giá</li>
               <li>Làm nền tảng cho profile nghề nghiệp tương lai</li>
             </ul>
           </div>
@@ -100,46 +127,52 @@
       <div class="section-label">// Các bài tập</div>
       <h2 class="section-title">6 Tuần · 6 Kỹ năng</h2>
       <div class="weeks-grid">
-        <a href="projects.html#week1" class="week-card" data-week="01">
+        <a href="projects.html#week1" class="week-card" data-week="01" id="week-card-1">
           <div class="week-num">01</div>
           <div class="week-icon">📁</div>
-          <div class="week-title">Quản lý tệp & thư mục</div>
+          <div class="week-title">Quản lý tệp &amp; thư mục</div>
           <div class="week-desc">Tổ chức dữ liệu khoa học trên Windows</div>
+          <div class="week-progress"><div class="week-progress-fill" style="--progress:92%"></div></div>
           <div class="week-arrow">→</div>
         </a>
-        <a href="projects.html#week2" class="week-card" data-week="02">
+        <a href="projects.html#week2" class="week-card" data-week="02" id="week-card-2">
           <div class="week-num">02</div>
           <div class="week-icon">🔍</div>
           <div class="week-title">Tìm kiếm học thuật</div>
           <div class="week-desc">Google Scholar, IEEE, toán tử nâng cao</div>
+          <div class="week-progress"><div class="week-progress-fill" style="--progress:88%"></div></div>
           <div class="week-arrow">→</div>
         </a>
-        <a href="projects.html#week3" class="week-card" data-week="03">
+        <a href="projects.html#week3" class="week-card" data-week="03" id="week-card-3">
           <div class="week-num">03</div>
           <div class="week-icon">✍️</div>
           <div class="week-title">Prompt Engineering</div>
           <div class="week-desc">Khuôn mẫu C-R-A-F-T cho AI</div>
+          <div class="week-progress"><div class="week-progress-fill" style="--progress:95%"></div></div>
           <div class="week-arrow">→</div>
         </a>
-        <a href="projects.html#week4" class="week-card" data-week="04">
+        <a href="projects.html#week4" class="week-card" data-week="04" id="week-card-4">
           <div class="week-num">04</div>
           <div class="week-icon">🤝</div>
           <div class="week-title">Hợp tác trực tuyến</div>
           <div class="week-desc">Trello · Discord · Google Workspace</div>
+          <div class="week-progress"><div class="week-progress-fill" style="--progress:85%"></div></div>
           <div class="week-arrow">→</div>
         </a>
-        <a href="projects.html#week5" class="week-card" data-week="05">
+        <a href="projects.html#week5" class="week-card" data-week="05" id="week-card-5">
           <div class="week-num">05</div>
           <div class="week-icon">🎨</div>
           <div class="week-title">Sáng tạo nội dung AI</div>
           <div class="week-desc">Infographic với Gemini + DALL-E 3</div>
+          <div class="week-progress"><div class="week-progress-fill" style="--progress:90%"></div></div>
           <div class="week-arrow">→</div>
         </a>
-        <a href="projects.html#week6" class="week-card" data-week="06">
+        <a href="projects.html#week6" class="week-card" data-week="06" id="week-card-6">
           <div class="week-num">06</div>
           <div class="week-icon">⚖️</div>
           <div class="week-title">AI có trách nhiệm</div>
           <div class="week-desc">Bộ nguyên tắc 3C-3K cá nhân</div>
+          <div class="week-progress"><div class="week-progress-fill" style="--progress:93%"></div></div>
           <div class="week-arrow">→</div>
         </a>
       </div>
@@ -160,10 +193,18 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 · Nhập môn Công nghệ số & AI · UET</span>
+      <span>© 2026 · Nhập môn Công nghệ số &amp; AI · UET</span>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // Trigger stat counters on load (hero section)
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.stat-item .stat-num').forEach(el => {
+        setTimeout(() => animateCounter(el), 800);
+      });
+    });
+  </script>
 </body>
 </html>
